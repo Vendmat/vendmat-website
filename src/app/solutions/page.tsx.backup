@@ -1,0 +1,293 @@
+import Button from '@/components/Button';
+import Card from '@/components/Card';
+import Image from 'next/image';
+
+export default function SolutionsPage() {
+  const solutions = [
+    {
+      id: 'corporate',
+      title: 'Corporate Offices',
+      subtitle: 'Employee Wellness Solutions',
+      description: 'Transform your workplace with 24/7 access to fresh, hot meals. Reduce overhead costs while boosting employee satisfaction.',
+      image: '/canva_designs/2.png',
+      benefits: [
+        'Reduce catering and pantry costs by 60%',
+        'Improve employee satisfaction scores',
+        '24/7 availability for all shifts',
+        'Zero maintenance - we handle everything',
+        'Customizable menus for your team'
+      ],
+      features: [
+        'Smart inventory management',
+        'Employee usage analytics',
+        'Cashless payment integration',
+        'Real-time health monitoring'
+      ],
+      stats: {
+        satisfaction: '92%',
+        costSaving: '60%',
+        uptime: '99.5%'
+      }
+    },
+    {
+      id: 'hostels',
+      title: 'Hostels & PGs',
+      subtitle: 'Student Food Solutions',
+      description: 'Affordable, nutritious meals for students available round the clock. No more late-night hunger or expensive delivery fees.',
+      image: '/canva_designs/5.png',
+      benefits: [
+        'Student-friendly pricing from ₹79',
+        'Late-night availability for studies',
+        'Nutritious, balanced meals',
+        'No delivery charges or waiting',
+        'Hygiene and safety guaranteed'
+      ],
+      features: [
+        'Budget-friendly pricing',
+        'Nutritional tracking',
+        'Student ID integration',
+        'Bulk ordering discounts'
+      ],
+      stats: {
+        satisfaction: '88%',
+        costSaving: '40%',
+        uptime: '24/7'
+      }
+    },
+    {
+      id: 'transit',
+      title: 'Transit Hubs',
+      subtitle: 'Traveler Convenience',
+      description: 'Serve busy commuters and transit workers with zero wait time. Perfect for airports, metro stations, and bus terminals.',
+      image: '/canva_designs/4.png',
+      benefits: [
+        'Instant service for busy travelers',
+        'No queuing or waiting time',
+        'Fresh meals during odd hours',
+        'Multiple payment options',
+        'Hygienic, contactless service'
+      ],
+      features: [
+        'Quick dispensing under 60 seconds',
+        'Multi-language interface',
+        'Mobile app pre-ordering',
+        'Real-time availability updates'
+      ],
+      stats: {
+        satisfaction: '85%',
+        costSaving: '50%',
+        uptime: '99.8%'
+      }
+    },
+    {
+      id: 'healthcare',
+      title: 'Hospitals & Healthcare',
+      subtitle: 'Healthcare Staff Solutions',
+      description: 'Support healthcare workers with nutritious meals available 24/7. Critical for night shifts and emergency situations.',
+      image: '/canva_designs/10.png',
+      benefits: [
+        'Support for night shift workers',
+        'Nutritious meals during long shifts',
+        'Emergency food availability',
+        'Special dietary options',
+        'Contactless, hygienic service'
+      ],
+      features: [
+        'Dietary preference filters',
+        'Nutritional information display',
+        'Emergency stock alerts',
+        'Healthcare worker discounts'
+      ],
+      stats: {
+        satisfaction: '90%',
+        costSaving: '45%',
+        uptime: '99.9%'
+      }
+    },
+    {
+      id: 'education',
+      title: 'Educational Institutions',
+      subtitle: 'Campus Food Solutions',
+      description: 'Supplement traditional cafeterias with always-available meal options. Perfect for libraries, labs, and study areas.',
+      image: '/canva_designs/3.png',
+      benefits: [
+        'Extend food service hours',
+        'Serve remote campus locations',
+        'Affordable pricing for students',
+        'Reduce cafeteria queues',
+        'Healthy meal options'
+      ],
+      features: [
+        'Student meal plan integration',
+        'Campus card payments',
+        'Nutrition education content',
+        'Sustainable packaging'
+      ],
+      stats: {
+        satisfaction: '87%',
+        costSaving: '35%',
+        uptime: '99.2%'
+      }
+    }
+  ];
+
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6">
+              Solutions for Every
+              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#f8650c] to-orange-400">
+                Industry
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Tailored smart vending solutions designed for your specific industry needs. 
+              From corporate offices to healthcare facilities, we've got you covered.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+            {solutions.map((solution) => (
+              <div key={solution.id} className="hover:scale-105 transition-transform cursor-pointer">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#f8650c] to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-white font-bold text-lg">
+                    {solution.title.charAt(0)}
+                  </span>
+                </div>
+                <h3 className="text-sm font-medium text-gray-300">
+                  {solution.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Grid */}
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="space-y-20">
+            {solutions.map((solution, index) => (
+              <div key={solution.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+              }`}>
+                {/* Content */}
+                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                  <div className="mb-6">
+                    <span className="text-[#f8650c] font-semibold text-sm uppercase tracking-wide">
+                      {solution.subtitle}
+                    </span>
+                    <h2 className="text-4xl font-bold text-white mt-2 mb-4">
+                      {solution.title}
+                    </h2>
+                    <p className="text-xl text-gray-300">
+                      {solution.description}
+                    </p>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="grid grid-cols-3 gap-6 mb-8">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-[#f8650c]">
+                        {solution.stats.satisfaction}
+                      </div>
+                      <div className="text-sm text-gray-400">Satisfaction</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-[#f8650c]">
+                        {solution.stats.costSaving}
+                      </div>
+                      <div className="text-sm text-gray-400">Cost Saving</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-[#f8650c]">
+                        {solution.stats.uptime}
+                      </div>
+                      <div className="text-sm text-gray-400">Uptime</div>
+                    </div>
+                  </div>
+
+                  {/* Benefits */}
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Key Benefits</h3>
+                    <ul className="space-y-2">
+                      {solution.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start text-gray-300">
+                          <span className="text-[#f8650c] mr-2 mt-1">✓</span>
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Features */}
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      {solution.features.map((feature, idx) => (
+                        <div key={idx} className="bg-gray-700/50 backdrop-blur-sm border border-gray-600/50 rounded-lg p-3">
+                          <span className="text-sm text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <Button size="lg" className="bg-gradient-to-br from-[#f8650c] to-orange-600 text-white hover:from-orange-600 hover:to-red-600">
+                    Get Started
+                  </Button>
+                </div>
+
+                {/* Image */}
+                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+                  <div className="relative rounded-lg overflow-hidden shadow-2xl">
+                    <Image
+                      src={solution.image}
+                      alt={solution.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-[#f8650c] to-orange-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Space?
+          </h2>
+          <p className="text-xl text-orange-100 mb-8">
+            Join hundreds of organizations already serving fresh, hot meals 24/7 with Vendmat.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-black hover:text-[#f8650c] font-semibold"
+              href="/contact"
+            >
+              Book a Demo
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-black hover:text-[#f8650c] font-semibold"
+              href="/partners"
+            >
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+} 

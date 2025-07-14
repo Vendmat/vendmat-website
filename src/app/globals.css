@@ -22,5 +22,351 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Wave Animation Styles */
+.wave-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Glowing Ring Animations */
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* Criss-Cross Oval Animations */
+@keyframes crissCross1 {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  50% { transform: rotate(180deg) scale(0.95); }
+  75% { transform: rotate(270deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes crissCross2 {
+  0% { transform: rotate(45deg) scale(1); }
+  33% { transform: rotate(135deg) scale(1.08); }
+  66% { transform: rotate(225deg) scale(0.92); }
+  100% { transform: rotate(405deg) scale(1); }
+}
+
+@keyframes crissCross3 {
+  0% { transform: rotate(90deg) scale(1); }
+  30% { transform: rotate(150deg) scale(1.12); }
+  60% { transform: rotate(240deg) scale(0.88); }
+  100% { transform: rotate(450deg) scale(1); }
+}
+
+@keyframes crissCross4 {
+  0% { transform: rotate(135deg) scale(1); }
+  40% { transform: rotate(200deg) scale(1.15); }
+  80% { transform: rotate(280deg) scale(0.9); }
+  100% { transform: rotate(495deg) scale(1); }
+}
+
+@keyframes crissCross5 {
+  0% { transform: rotate(30deg) scale(1); }
+  50% { transform: rotate(210deg) scale(1.2); }
+  100% { transform: rotate(390deg) scale(1); }
+}
+
+/* Drift animations for gradient fills */
+@keyframes drift {
+  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
+  25% { transform: translateX(10px) translateY(-5px) rotate(5deg); }
+  50% { transform: translateX(-5px) translateY(8px) rotate(-3deg); }
+  75% { transform: translateX(8px) translateY(-3px) rotate(4deg); }
+}
+
+/* Orbital animations for particles */
+@keyframes orbit1 {
+  0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(-360deg) translateX(150px) rotate(360deg); }
+}
+
+@keyframes orbit3 {
+  0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* 3D Transform Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.transform-gpu {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.translate-z-\[5px\] {
+  transform: translateZ(5px);
+}
+
+.translate-z-\[3px\] {
+  transform: translateZ(3px);
+}
+
+.translate-z-\[2px\] {
+  transform: translateZ(2px);
+}
+
+.translate-z-\[-5px\] {
+  transform: translateZ(-5px);
+}
+
+.translate-z-\[-10px\] {
+  transform: translateZ(-10px);
+}
+
+.translate-z-\[-20px\] {
+  transform: translateZ(-20px);
+}
+
+.translate-z-\[-50px\] {
+  transform: translateZ(-50px);
+}
+
+/* 3D Depth Gradient Overlays */
+.depth-gradient-1 {
+  background: linear-gradient(135deg, 
+    rgba(248, 101, 12, 0.1) 0%, 
+    rgba(255, 165, 0, 0.05) 50%, 
+    transparent 100%);
+}
+
+.depth-gradient-2 {
+  background: linear-gradient(-45deg, 
+    rgba(0, 0, 0, 0.3) 0%, 
+    rgba(0, 0, 0, 0.1) 50%, 
+    transparent 100%);
+}
+
+.depth-shadow-primary {
+  box-shadow: 
+    0 20px 40px rgba(248, 101, 12, 0.2),
+    0 40px 80px rgba(248, 101, 12, 0.1),
+    0 0 0 1px rgba(248, 101, 12, 0.1);
+}
+
+.depth-shadow-secondary {
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 20px 60px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.rotate-y-\[8deg\] {
+  transform: rotateY(8deg);
+}
+
+.rotate-x-\[4deg\] {
+  transform: rotateX(4deg);
+}
+
+/* 3D Hover Effect Animation */
+@keyframes rotate3d {
+  0% { transform: rotateY(0deg) rotateX(0deg); }
+  50% { transform: rotateY(4deg) rotateX(2deg); }
+  100% { transform: rotateY(0deg) rotateX(0deg); }
+}
+
+/* Enhanced 3D Float Animation */
+@keyframes float3d {
+  0%, 100% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotateY(1deg);
+  }
+  66% {
+    transform: translateY(-4px) rotateY(-1deg);
+  }
+}
+
+/* Hero entrance animations - Made more reliable */
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(248, 101, 12, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(248, 101, 12, 0.8), 0 0 30px rgba(248, 101, 12, 0.6);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Improved scroll-triggered animations - More reliable */
+.scroll-animate {
+  opacity: 1; /* Always visible by default */
+}
+
+.animate-on-scroll {
+  opacity: 1; /* Always visible by default */
+  transform: translateY(0);
+  transition: all 0.6s ease-out;
+}
+
+/* Enhanced entrance animations with better fallbacks */
+.animate-entrance {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animate-entrance-delayed {
+  animation: slideInUp 0.8s ease-out 0.2s forwards;
+}
+
+.animate-entrance-right {
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+/* Ensure all animated elements are visible by default for SSR */
+[class*="animate-["] {
+  opacity: 1;
+}
+
+/* Override for specific animations that need opacity control */
+.animate-[slideInUp_1s_ease-out_0\.2s] {
+  animation: slideInUp 1s ease-out 0.2s forwards;
+}
+
+.animate-[slideInUp_1s_ease-out_0\.4s] {
+  animation: slideInUp 1s ease-out 0.4s forwards;
+}
+
+.animate-[slideInUp_1s_ease-out_0\.6s] {
+  animation: slideInUp 1s ease-out 0.6s forwards;
+}
+
+.animate-[slideInUp_1s_ease-out_0\.8s] {
+  animation: slideInUp 1s ease-out 0.8s forwards;
+}
+
+.animate-[slideInUp_1s_ease-out_1s] {
+  animation: slideInUp 1s ease-out 1s forwards;
+}
+
+.animate-[fadeInRight_1\.5s_ease-out_0\.5s] {
+  animation: fadeInRight 1.5s ease-out 0.5s forwards;
+}
+
+.animate-[glow_3s_ease-in-out_infinite] {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-[float3d_12s_ease-in-out_infinite] {
+  animation: float3d 12s ease-in-out infinite;
+}
+
+.animate-[float3d_10s_ease-in-out_infinite_2s] {
+  animation: float3d 10s ease-in-out infinite 2s;
+}
+
+.animate-[float3d_8s_ease-in-out_infinite_4s] {
+  animation: float3d 8s ease-in-out infinite 4s;
+}
+
+.animate-[float3d_6s_ease-in-out_infinite_6s] {
+  animation: float3d 6s ease-in-out infinite 6s;
+}
+
+/* Staggered animation delays for scroll elements */
+.animate-on-scroll[data-delay="100"] {
+  transition-delay: 0.1s;
+}
+
+.animate-on-scroll[data-delay="200"] {
+  transition-delay: 0.2s;
+}
+
+.animate-on-scroll[data-delay="300"] {
+  transition-delay: 0.3s;
+}
+
+.animate-on-scroll[data-delay="400"] {
+  transition-delay: 0.4s;
+}
+
+/* Fix for animation-fill-mode issues */
+[animation-fill-mode\:forwards] {
+  animation-fill-mode: forwards;
 }
