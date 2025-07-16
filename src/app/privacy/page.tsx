@@ -49,8 +49,8 @@ export default function PrivacyPage() {
           {/* Introduction */}
           <div className="relative p-8 bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] rounded-3xl hover:bg-white/[0.05] hover:border-orange-500/30 transition-all duration-500 mb-12">
             <p className="text-xl text-gray-300 leading-relaxed">
-              At Vendmat Technologies Private Limited ("Vendmat," "we," "us," or "our"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our mobile application, or utilize our smart vending services.
-            </p>
+                At Vendmat Technologies Private Limited ("Vendmat," "we," "us," or "our"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our mobile application, or utilize our smart vending services.
+              </p>
           </div>
           
           {/* Content Sections */}
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
                         <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 flex-shrink-0" />
                         <span>Location data to help you find nearby Vendmat machines</span>
                       </li>
-                    </ul>
+              </ul>
                   </div>
 
                   <div className="relative p-6 bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] rounded-2xl">
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
                         <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 flex-shrink-0" />
                         <span>Machine interaction data and feedback</span>
                       </li>
-                    </ul>
+              </ul>
                   </div>
 
                   <div className="relative p-6 bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] rounded-2xl">
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
                         <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 flex-shrink-0" />
                         <span>Website navigation patterns and session data</span>
                       </li>
-                    </ul>
+              </ul>
                   </div>
                 </div>
               </div>
@@ -211,8 +211,8 @@ export default function PrivacyPage() {
                 
                 <div className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
-                  </p>
+                We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
+              </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
@@ -368,9 +368,9 @@ export default function PrivacyPage() {
               </div>
             </div>
 
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
   );
 } 

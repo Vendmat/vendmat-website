@@ -25,7 +25,7 @@ export default function Home() {
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-500/[0.05] via-transparent to-red-500/[0.05] blur-3xl" />
-          <WaveAnimation />
+        <WaveAnimation />
         </div>
 
         {/* Floating Geometric Shapes */}
@@ -50,17 +50,17 @@ export default function Home() {
               
               {/* Left Content */}
               <div className="space-y-8">
-                {/* Badge */}
+              {/* Badge */}
                 <div className="animate-[slideInUp_1s_ease-out_0.2s]">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-sm">
                     <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
                     <span className="text-sm text-white/60 tracking-wide font-medium">
-                      Food Court In a Vending Machine
+                Food Court In a Vending Machine
                     </span>
                   </div>
-                </div>
-                
-                {/* Main Heading */}
+              </div>
+              
+              {/* Main Heading */}
                 <div className="space-y-4 animate-[slideInUp_1s_ease-out_0.4s]">
                   <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-none">
                     <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 block">
@@ -68,8 +68,8 @@ export default function Home() {
                     </span>
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-red-400 to-orange-500 block font-black italic transform -skew-x-3 tracking-wider animate-[glow_3s_ease-in-out_infinite]">
                       Meals Always
-                    </span>
-                  </h1>
+                </span>
+              </h1>
                   
                   {/* Temperature indicator */}
                   <div className="flex items-center gap-3 mt-6">
@@ -80,13 +80,13 @@ export default function Home() {
                     <div className="text-white/40 text-sm">• No Reheating Required</div>
                   </div>
                 </div>
-                
-                {/* Subheading */}
+              
+              {/* Subheading */}
                 <p className="text-xl lg:text-2xl text-white/60 leading-relaxed max-w-xl animate-[slideInUp_1s_ease-out_0.6s]">
                   Revolutionary hot food vending machines with advanced supply chain technology delivering restaurant-quality meals instantly.
-                </p>
-                
-                {/* CTA Buttons */}
+              </p>
+              
+              {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 animate-[slideInUp_1s_ease-out_0.8s]">
                   <Button 
                     href="/contact" 
@@ -95,7 +95,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="relative z-10">Book a Demo</span>
                     <div className="absolute inset-0 bg-white/10 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 skew-x-12" />
-                  </Button>
+                </Button>
                   <Button 
                     href="/menu" 
                     variant="outline" 
@@ -103,36 +103,36 @@ export default function Home() {
                   >
                     <span>View Menu</span>
                     <div className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</div>
-                  </Button>
-                </div>
+                </Button>
+              </div>
                 
                 {/* Key Features */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8 animate-[slideInUp_1s_ease-out_1s]">
                   <div className="text-center p-3 bg-white/[0.02] border border-white/[0.05] rounded-lg backdrop-blur-sm">
                     <div className="text-2xl font-bold text-orange-400">4+</div>
                     <div className="text-white/60 text-xs">Restaurant Partners</div>
-                  </div>
+            </div>
                   <div className="text-center p-3 bg-white/[0.02] border border-white/[0.05] rounded-lg backdrop-blur-sm">
                     <div className="text-2xl font-bold text-orange-400">24/7</div>
                     <div className="text-white/60 text-xs">Always Available</div>
-                  </div>
+          </div>
                   <div className="text-center p-3 bg-white/[0.02] border border-white/[0.05] rounded-lg backdrop-blur-sm col-span-2 sm:col-span-1">
                     <div className="text-2xl font-bold text-orange-400">2hrs</div>
                     <div className="text-white/60 text-xs">Pre-order Window</div>
-                  </div>
-                </div>
-              </div>
-              
+            </div>
+          </div>
+        </div>
+
               {/* Right Content - Enhanced Machine Display */}
               <div className="relative flex justify-center lg:justify-end animate-[fadeInRight_1.5s_ease-out_0.5s]">
                 {/* Background glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-red-500/20 blur-3xl scale-150" />
                 
                 {/* Glowing rings behind machine */}
-                <div className="absolute inset-0 z-0">
-                  <GlowingRings />
-                </div>
-                
+            <div className="absolute inset-0 z-0">
+              <GlowingRings />
+            </div>
+            
                 {/* Machine container with enhanced 3D effects */}
                 <div className="relative z-10 group">
                   {/* Ground shadow */}
@@ -141,9 +141,9 @@ export default function Home() {
                   {/* Machine with interactive hover effects */}
                   <div className="relative transform transition-all duration-700 group-hover:scale-105 group-hover:rotate-y-2">
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-red-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <ScrollAnimatedMachine />
+                <ScrollAnimatedMachine />
                   </div>
-                  
+                
                   {/* Floating particles around machine */}
                   <div className="absolute top-[20%] left-[10%] w-2 h-2 bg-orange-400 rounded-full animate-ping opacity-60" />
                   <div className="absolute top-[60%] right-[15%] w-1 h-1 bg-yellow-400 rounded-full animate-ping opacity-40" style={{ animationDelay: '1s' }} />
@@ -152,8 +152,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        
+            </div>
+            
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
@@ -178,7 +178,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-on-scroll [animation-delay:200ms]">
               Experience the future of food service with our revolutionary four-step process that puts fresh, hot meals at your fingertips.
             </p>
-          </div>
+              </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -223,14 +223,14 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-full blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="relative w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-2xl">
                         {item.step}
-                      </div>
-                    </div>
-                  </div>
+            </div>
+              </div>
+            </div>
                   
                   {/* Icon */}
                   <div className="text-4xl mb-6 mt-4 transform group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
-                  </div>
+              </div>
                   
                   {/* Content */}
                   <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-orange-300 transition-colors duration-300">
@@ -242,7 +242,7 @@ export default function Home() {
                   
                   {/* Decorative element */}
                   <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500/0 via-orange-500/50 to-orange-500/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                </div>
+            </div>
               </div>
             ))}
           </div>
@@ -260,8 +260,8 @@ export default function Home() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-on-scroll [animation-delay:200ms]">
               Transform any location into a premium 24/7 food destination with Vendmat's intelligent vending solutions.
             </p>
-          </div>
-          
+            </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {[
               {
@@ -294,15 +294,15 @@ export default function Home() {
                   {/* Image container */}
                   <div className="relative h-64 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10" />
-                    <Image
+                <Image
                       src={useCase.image}
                       alt={useCase.title}
-                      fill
+                  fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
-                      loading="lazy"
-                      sizes="(max-width: 768px) 100vw, 400px"
-                    />
-                  </div>
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+              </div>
                   
                   {/* Content */}
                   <div className="p-8">
@@ -321,8 +321,8 @@ export default function Home() {
                           {feature}
                         </li>
                       ))}
-                    </ul>
-                  </div>
+              </ul>
+            </div>
                 </div>
               </div>
             ))}
@@ -408,11 +408,11 @@ export default function Home() {
                   <div className="text-4xl mb-4">{stat.icon}</div>
                   <div className="text-5xl font-bold text-orange-400 mb-3 group-hover:scale-110 transition-transform duration-300">
                     {stat.metric}
-                  </div>
+            </div>
                   <div className="text-xl text-white font-semibold mb-2">{stat.label}</div>
                   <div className="text-gray-400 text-sm">{stat.sublabel}</div>
-                </div>
-              </div>
+            </div>
+            </div>
             ))}
           </div>
         </div>
@@ -432,8 +432,8 @@ export default function Home() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Visit any of our active Vendmat locations for fresh, hot meals available around the clock
             </p>
-          </div>
-          
+            </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {[
               {
@@ -469,7 +469,7 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                </div>
+            </div>
               </div>
             ))}
           </div>

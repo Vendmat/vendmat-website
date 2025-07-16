@@ -232,7 +232,7 @@ const Layout: React.FC<LayoutProps> = ({
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Terms of Service
               </Link>
               <Link href="/shipping-policy" className="text-gray-400 hover:text-white transition-colors text-sm">

@@ -17,4 +17,4 @@ Allow: /menu
 Allow: /partners
 Allow: /contact
 Allow: /privacy
-Allow: /terms 
+Allow: /terms-of-service 
